@@ -50,7 +50,7 @@
                                <li class="nav-item">
                                 <a class="nav-link" href="">My Posts</a></li>
                                 <li class="nav-item">
-                                <a class="nav-link" href="">BLOG</a></li>
+                                <a class="nav-link" href="{{ route('posts') }}">BLOG</a></li>
                                 <li class="nav-item">
                                 <a class="nav-link" href="">ABOUT</a></li>
                                 <li class="nav-item">
