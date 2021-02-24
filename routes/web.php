@@ -32,3 +32,5 @@ Route::get('/userposts', [PostsController::class,'userposts'])->name('userposts'
 Route::any('/newpost', [PostsController::class,'newpost'])->name('newpost')->middleware('auth');
 
 Route::any('/search', [PostsController::class,'search'])->name('search');
+
+Route::any('/edit_post/{post}', [PostsController::class,'edit_post'])->name('post.edit')->middleware('auth');

@@ -51,4 +51,18 @@ class PostsController extends Controller
         return view ('posts', ['posts' => $posts]);
     }
 
+    public function edit_post(Post $post, Request $request){
+        if($request->method() == 'POST'){
+            $post->title = $request->get('title');
+            $post->body = $request->get('body');
+            $post->save();
+            if ($post->save()){
+                echo "Η ανάρτηση σας έχει καταχωρηθεί επιτυχώς!";
+                return redirect('posts');
+            };
+        };
+        return view('edit_post', ['post' => $post]);
+
+    }
+
 }
