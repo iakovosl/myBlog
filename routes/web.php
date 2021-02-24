@@ -25,6 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/posts', [PostsController::class,'index'])->name('posts')->middleware('auth');
 
-Route::get('/posts', [PostsController::class,'index'])->name('posts')->middleware('auth');
+Route::get('/userposts', [PostsController::class,'userposts'])->name('userposts')->middleware('auth');
 
 Route::any('/newpost', [PostsController::class,'newpost'])->name('newpost')->middleware('auth');

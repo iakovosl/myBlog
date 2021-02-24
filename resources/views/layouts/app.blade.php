@@ -48,7 +48,7 @@
                                <li class="nav-item active">
                                 <a class="nav-link" href="">HOME<span class="sr-only">(current)</span></a> </li>
                                <li class="nav-item">
-                                <a class="nav-link" href="">My Posts</a></li>
+                                <a class="nav-link" href="{{ route('userposts') }}">My Posts</a></li>
                                 <li class="nav-item">
                                 <a class="nav-link" href="{{ route('posts') }}">BLOG</a></li>
                                 <li class="nav-item">

@@ -15,6 +15,12 @@ class PostsController extends Controller
         return view('posts',['posts'=>$posts]); 
     }
 
+    public function userposts (){
+        $user = Auth::user();
+        $posts = Post::where("user_id", "=", $user->id)->get();
+        return view('posts',['posts'=>$posts]); 
+    }
+
     public function newpost(Request $request){
         if($request->method() == 'POST'){
             $post = new Post();
@@ -29,4 +35,5 @@ class PostsController extends Controller
         };
         return view ('newpost');
     }
+
 }
