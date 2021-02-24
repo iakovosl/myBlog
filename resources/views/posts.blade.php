@@ -37,7 +37,7 @@
                         <button type="button" class="date-bt">{{ date('d-m-Y', strtotime($post->created_at))}}</button>
                         <p>
                             <h2>
-                             <a href=""> {{ $post->title }}</a> 
+                             <a href="{{route('post',$post)}}"> {{ $post->title }}</a> 
                             </h2>
                             {{ $post->body }}
                         </p>

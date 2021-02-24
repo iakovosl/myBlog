@@ -21,6 +21,11 @@ class PostsController extends Controller
         return view('posts',['posts'=>$posts]); 
     }
 
+    public function post(Post $post){
+        return view('post', ['post' => $post]);
+
+    }
+
     public function newpost(Request $request){
         if($request->method() == 'POST'){
             $post = new Post();
