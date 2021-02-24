@@ -65,4 +65,11 @@ class PostsController extends Controller
 
     }
 
+    public function delete_post(Post $post){
+        if(\Auth::user()->id!= $post->user->id) return redirect('posts');
+        $post->delete();
+        return redirect('posts');
+    }
+
+
 }

@@ -34,3 +34,5 @@ Route::any('/newpost', [PostsController::class,'newpost'])->name('newpost')->mid
 Route::any('/search', [PostsController::class,'search'])->name('search');
 
 Route::any('/edit_post/{post}', [PostsController::class,'edit_post'])->name('post.edit')->middleware('auth');
+
+Route::any('/delete_post/{post}', [PostsController::class,'delete_post'])->name('post.delete');
