@@ -30,3 +30,5 @@ Route::any('/post/{post}', [PostsController::class,'post'])->name('post')->middl
 Route::get('/userposts', [PostsController::class,'userposts'])->name('userposts')->middleware('auth');
 
 Route::any('/newpost', [PostsController::class,'newpost'])->name('newpost')->middleware('auth');
+
+Route::any('/search', [PostsController::class,'search'])->name('search');

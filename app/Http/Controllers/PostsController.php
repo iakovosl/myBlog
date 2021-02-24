@@ -41,4 +41,14 @@ class PostsController extends Controller
         return view ('newpost');
     }
 
+    public function search(Request $request){
+        $q = $request -> get('q', 'Δεν υπάρχει αναζήτηση');
+        if (!$request->filled('q')) $q='Δεν υπάρχει αναζήτηση';
+        else {
+            //$posts = Post::where('title','like', '%' .$q.'%')->get();
+            $posts = Post::orwhere('title','like', '%' .$q.'%')->orwhere('title','like', '%' .$q.'%')->get();
+        }
+        return view ('posts', ['posts' => $posts]);
+    }
+
 }

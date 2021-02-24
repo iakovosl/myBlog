@@ -14,7 +14,7 @@
                 <h1 class="blog_text">Αναρτήσεις</h1>
             </div>
         </div>
-        <form class="form-inline my-2 my-lg-0" method="GET" action="">
+        <form class="form-inline my-2 my-lg-0" method="GET" action="{{route('search')}}">
             <div class="row">
                 <div class="col-sm-8">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
