@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostsController;
 
+use App\Http\Controllers\CommentsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +38,5 @@ Route::any('/search', [PostsController::class,'search'])->name('search');
 Route::any('/edit_post/{post}', [PostsController::class,'edit_post'])->name('post.edit')->middleware('auth');
 
 Route::any('/delete_post/{post}', [PostsController::class,'delete_post'])->name('post.delete');
+
+Route::any('/newcomment/{post}', [CommentsController::class,'new_comment'])->name('newcomment')->middleware('auth');

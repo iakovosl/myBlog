@@ -9,9 +9,18 @@
         <a href="{{route('post.edit',$post)}}"><button class="btn btn-primary">Edit post</button>
         <a href="{{route('post.delete',$post)}}"><button class="btn btn-danger">Delete post</button>
             @endif
-            
+            <hr>
+            <a href="{{route('newcomment',$post)}}">Απάντηση στο Post</a>
     </div>
-  
+  Σχόλια:
+  @foreach ($post->comments as $comment)
+  <p class="comment">
+      <strong>{{$comment->user->name}}</strong>
+      {{ $comment->comment}}
+  </p>
+  @endforeach
+</div>
 @endsection
+    
     
     
